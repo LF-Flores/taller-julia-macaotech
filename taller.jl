@@ -11,7 +11,6 @@ using InteractiveUtils
 begin
 	import Pkg
 	Pkg.activate(".")
-	Pkg.instantiate()
 	using DifferentialEquations, Plots
 end
 
@@ -64,7 +63,20 @@ Esto se lleva un paso más allá con **multiple dispatch**, que nos permite defi
 # ╔═╡ c0523206-1da5-11eb-1b19-cb7103b63d28
 md"# Modelos
 ## Preliminares de ecuaciones diferenciales
-TEST
+Gracias a la gran eficiencia de métodos iterativos y de álgebra lineal, la forma preferencial de pensar en ecuaciones diferenciales es en su forma de *sistema de ecuaciones de primer órden*. Esto siempre es posible de obtener mediante [reducción de órden](https://en.wikipedia.org/wiki/Ordinary_differential_equation#Reduction_of_order).
+
+Una vez realizado, la forma que obtenemos, para ecuaciones autónomas (no dependientes de manera explícita del tiempo), es:
+
+$$
+x'(t) = F(x(t))
+$$
+
+donde $x: \mathbb{R} \rightarrow \mathbb{R}^n$ es una trayectoria en el espacio para la cual deseamos resolver y obedece la dinámica del campo vectorial:
+
+$$F: \mathbb{R}^n \rightarrow \mathbb{R}^n$$
+
+Esto define un sistema de $n$ ecuaciones a resolver. A continuación veremos algunos ejemplos.
+
 
 ## 1. Péndulo caótico
 El péndulo doble es un sistema muy famosamente estudiado por exhibir un comportamiento **caótico** (cuya definición matemática es rigurosa). Sus ecuaciones del movimiento son las siguientes:

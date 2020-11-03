@@ -1,13 +1,25 @@
 # Taller Macao Tech: Cómputo científico en Julia
+
 ## ¿Qué es y qué no es este taller?
+
 ### Qué no es...
 * No será una introducción completa al lenguaje de programación, Julia (Muy poco tiempo). Aunque **no** se asume conocimiento previo de todas maneras.
 * No es un taller que pueda reemplazar completamente uno de análisis numérico
+
 ### Qué es...
 * Un vistazo a la realidad de lo que puede ser crear modelos y utilizar métodos numéricos para cómputo científico en el lenguaje Julia.
 * Una introducción a tópicos aplicados en ciencias e ingeniería.
+
+## Descripción de archivos
+Los archivos en este repositorio son de principal utilizar a quienes tienen instalados el lenguaje de programación Julia. No obstante, se tiene un archivo `.html` para visualizar el cuaderno utilizado sin necesitar dicha instalación. Por lo demás:
+* `taller.jl`: Un Pluto notebook utilizado en el taller para demostración de algunos métodos y problemas en la resolución de ecuaciones diferenciales, inspirado por algunos tutoriales de SciML citados en la bibliografía.
+* `ejemplo_neural_ode`: Script de ejemplo de resolución de un sistema dinámico basado en datos mediante la integración de redes neuronales y métodos de ecuaciones diferenciales.
+* `Manifest.toml` y `Project.toml`: Archivos de dependencias del proyecto.
+
 ## ¿Cómo usar este proyecto?
-Si se desea utilizar como proyecto autocontenido, el cuaderno actual provee ya la interfaz necesaria para funcionar al abrir. No obstante, si se desean crear otros archivos y manipularlos se proveen el `Project.toml` y `Manifest.toml` para utilizar una vez dentro del directorio, el comando
+El cuaderno `taller.jl` puede ser ejecutado sin todas las dependencias del proyecto, pues solamente utiliza el paquete `DifferentialEquations.jl` que puede ser instalado de manera individual y `Plot.jl` que es parte de la librería estándar de Julia.
+
+No obstante, para obtener el ambiente completo de dependencias con la cual fue probado el script `ejemplo_neural_ode.jl` de entrenamiento de la ecuación diferencial neuronal, se debe instanciar el proyecto de la siguiente manera mediante el administrador de paquetes de Julia:
 ```Julia
 Pkg> activate . 
 Pkg> instantiate
@@ -16,7 +28,7 @@ y de forma opcional:
 ```Julia
 Pkg> update; precompile
 ```
-Para inicializar la paquetería (descargar y precompilar) necesaria. Esto ya se realiza dentro de este cuaderno a continuación para facilidad de uso:
+Esto cada vez que se desee actualizar y tener precompilado los paquetes a utilizar.
 
 ## Bibliografía
 * [Documentación de SciML](https://sciml.ai/) 

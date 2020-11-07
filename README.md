@@ -1,5 +1,9 @@
 # Taller Macao Tech: Cómputo científico en Julia
 
+- PARA MÁS INFORMACIÓN SOBRE EL FUTURO CURSO A IMPARTIR DE JULIA, MANDAR CORREO A: juliaforeducation@gmail.com
+- Charla de la semana de la carrera de matemática: [Aquí](https://www.facebook.com/SemanaCarreradeMatematicaUNAH/videos/810162896484095)
+- Charla de este taller: [Aquí](https://www.youtube.com/watch?v=onu9-V6zhYg)
+
 ## ¿Qué es y qué no es este taller?
 
 ### Qué no es...

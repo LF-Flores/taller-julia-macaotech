@@ -107,7 +107,7 @@ html"
 # ╔═╡ 02926624-1da9-11eb-1b45-b5268512ebb9
 # El prefijo const es opcional y no significa VALOR constante, si no tipo constante.
 begin
-	const m₁, m₂, L₁, L₂, g = 1, 2, 1, 2, 9.81
+	const m₁, m₂, L₁, L₂, g = 1, 2, 1, 2, 9.81   
 	initial = [0, π/3, 0, 3pi/5]
 	tspan = (0., 50.)
 end;
